@@ -1,0 +1,1067 @@
+[
+  {
+    "component": "controller",
+    "help": "How long Kubernetes API requests take",
+    "labels": [],
+    "name": "tekton_pipelines_controller_client_latency",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of API requests (broken down by status code)",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_client_results",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of memory in profiling bucket hash tables.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_bucket_hash_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The cumulative count of heap objects freed.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_frees",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The fraction of this program's available CPU time used by the GC since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_gc_cpu_fraction",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of memory in garbage collection metadata.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_gc_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes in idle (unused) spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_idle",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes in in-use spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of physical memory returned to the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_released",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of heap memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_heap_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The time the last garbage collection finished, as nanoseconds since 1970 (the UNIX epoch).",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_last_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of pointer lookups performed by the runtime.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_lookups",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The cumulative count of heap objects allocated.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_mallocs",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of allocated mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_mcache_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of memory obtained from the OS for mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_mcache_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of allocated mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_mspan_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of memory obtained from the OS for mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_mspan_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The target heap size of the next GC cycle.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_next_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of GC cycles that were forced by the application calling the GC function.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_num_forced_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of completed GC cycles.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_num_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of memory in miscellaneous off-heap runtime allocations.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_other_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes in stack spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_stack_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of bytes of stack memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_stack_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The total bytes of memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The cumulative bytes allocated for heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_total_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The cumulative nanoseconds in GC stop-the-world pauses since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_go_total_gc_pause_ns",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The pipelinerun execution time in seconds",
+    "labels": [],
+    "name": "tekton_pipelines_controller_pipelinerun_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "The pipelinerun's taskrun execution time in seconds",
+    "labels": [],
+    "name": "tekton_pipelines_controller_pipelinerun_taskrun_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns",
+    "labels": [
+      "status"
+    ],
+    "name": "tekton_pipelines_controller_pipelinerun_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of reconcile operations",
+    "labels": [
+      "reconciler",
+      "success",
+      "namespace_name"
+    ],
+    "name": "tekton_pipelines_controller_reconcile_count",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Latency of reconcile operations",
+    "labels": [],
+    "name": "tekton_pipelines_controller_reconcile_latency",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns executing currently",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_pipelineruns",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns executing currently that are waiting on resolution requests for their pipeline references.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_pipelineruns_waiting_on_pipeline_resolution",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns executing currently that are waiting on resolution requests for the task references of their taskrun children.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_pipelineruns_waiting_on_task_resolution",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_taskruns",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently, but whose underlying Pods or Containers are suspended by k8s because of Node level constraints. Such suspensions can occur as part of initial scheduling of the Pod, or scheduling of any of the subsequent Container(s) in the Pod after the first Container is started",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_taskruns_throttled_by_node",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently, but whose underlying Pods or Containers are suspended by k8s because of defined ResourceQuotas. Such suspensions can occur as part of initial scheduling of the Pod, or scheduling of any of the subsequent Container(s) in the Pod after the first Container is started",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_taskruns_throttled_by_quota",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently that are waiting on resolution requests for their task references.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_running_taskruns_waiting_on_task_resolution_count",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns",
+    "labels": [
+      "status"
+    ],
+    "name": "tekton_pipelines_controller_taskrun_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "scheduling latency for the taskruns pods",
+    "labels": [
+      "task",
+      "pod",
+      "namespace"
+    ],
+    "name": "tekton_pipelines_controller_taskruns_pod_latency_milliseconds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Depth of the work queue",
+    "labels": [
+      "reconciler"
+    ],
+    "name": "tekton_pipelines_controller_work_queue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of adds handled by workqueue",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_workqueue_adds_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Current depth of workqueue",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_workqueue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "How long in seconds the longest outstanding workqueue item has been in flight.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_workqueue_longest_running_processor_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "How long in seconds an item stays in workqueue before being requested.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_workqueue_queue_latency_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of retries handled by workqueue",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_controller_workqueue_retries_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "How long in seconds the outstanding workqueue items have been in flight (total).",
+    "labels": [],
+    "name": "tekton_pipelines_controller_workqueue_unfinished_work_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "How long in seconds processing an item from workqueue takes.",
+    "labels": [],
+    "name": "tekton_pipelines_controller_workqueue_work_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "events",
+    "help": "How long Kubernetes API requests take",
+    "labels": [],
+    "name": "events_controller_client_latency",
+    "type": "histogram"
+  },
+  {
+    "component": "events",
+    "help": "Total number of API requests (broken down by status code)",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_client_results",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of memory in profiling bucket hash tables.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_bucket_hash_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The cumulative count of heap objects freed.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_frees",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The fraction of this program's available CPU time used by the GC since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_gc_cpu_fraction",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of memory in garbage collection metadata.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_gc_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes in idle (unused) spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_idle",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes in in-use spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of physical memory returned to the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_released",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of heap memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_heap_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The time the last garbage collection finished, as nanoseconds since 1970 (the UNIX epoch).",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_last_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of pointer lookups performed by the runtime.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_lookups",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The cumulative count of heap objects allocated.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_mallocs",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of allocated mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_mcache_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of memory obtained from the OS for mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_mcache_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of allocated mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_mspan_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of memory obtained from the OS for mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_mspan_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The target heap size of the next GC cycle.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_next_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of GC cycles that were forced by the application calling the GC function.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_num_forced_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of completed GC cycles.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_num_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of memory in miscellaneous off-heap runtime allocations.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_other_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes in stack spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_stack_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of bytes of stack memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_stack_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The total bytes of memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The cumulative bytes allocated for heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_total_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The cumulative nanoseconds in GC stop-the-world pauses since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "events_controller_go_total_gc_pause_ns",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "How long in seconds the longest outstanding workqueue item has been in flight.",
+    "labels": [],
+    "name": "events_controller_workqueue_longest_running_processor_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "events",
+    "help": "How long in seconds the outstanding workqueue items have been in flight (total).",
+    "labels": [],
+    "name": "events_controller_workqueue_unfinished_work_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "How long Kubernetes API requests take",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_client_latency",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of API requests (broken down by status code)",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_client_results",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of memory in profiling bucket hash tables.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_bucket_hash_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The cumulative count of heap objects freed.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_frees",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The fraction of this program's available CPU time used by the GC since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_gc_cpu_fraction",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of memory in garbage collection metadata.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_gc_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes in idle (unused) spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_idle",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes in in-use spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of allocated heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of physical memory returned to the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_released",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of heap memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_heap_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The time the last garbage collection finished, as nanoseconds since 1970 (the UNIX epoch).",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_last_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of pointer lookups performed by the runtime.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_lookups",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The cumulative count of heap objects allocated.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_mallocs",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of allocated mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_mcache_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of memory obtained from the OS for mcache structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_mcache_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of allocated mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_mspan_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of memory obtained from the OS for mspan structures.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_mspan_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The target heap size of the next GC cycle.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_next_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of GC cycles that were forced by the application calling the GC function.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_num_forced_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of completed GC cycles.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_num_gc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of memory in miscellaneous off-heap runtime allocations.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_other_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes in stack spans.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_stack_in_use",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of bytes of stack memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_stack_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The total bytes of memory obtained from the OS.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_sys",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The cumulative bytes allocated for heap objects.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_total_alloc",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The cumulative nanoseconds in GC stop-the-world pauses since the program started.",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_go_total_gc_pause_ns",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of reconcile operations",
+    "labels": [
+      "reconciler",
+      "namespace_name",
+      "success"
+    ],
+    "name": "tekton_pipelines_webhook_reconcile_count",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Latency of reconcile operations",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_reconcile_latency",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of requests that are routed to webhook",
+    "labels": [
+      "resource_resource",
+      "result_status",
+      "request_operation",
+      "resource_version",
+      "admission_allowed",
+      "kind_group",
+      "kind_kind",
+      "resource_group",
+      "result_code",
+      "desired_api_version",
+      "kind_version",
+      "result_reason"
+    ],
+    "name": "tekton_pipelines_webhook_request_count",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "The response time in milliseconds",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_request_latencies",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Depth of the work queue",
+    "labels": [
+      "reconciler"
+    ],
+    "name": "tekton_pipelines_webhook_work_queue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of adds handled by workqueue",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_workqueue_adds_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Current depth of workqueue",
+    "labels": [
+      "name"
+    ],
+    "name": "tekton_pipelines_webhook_workqueue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "How long in seconds the longest outstanding workqueue item has been in flight.",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_workqueue_longest_running_processor_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "How long in seconds an item stays in workqueue before being requested.",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_workqueue_queue_latency_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "How long in seconds the outstanding workqueue items have been in flight (total).",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_workqueue_unfinished_work_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "How long in seconds processing an item from workqueue takes.",
+    "labels": [],
+    "name": "tekton_pipelines_webhook_workqueue_work_duration_seconds",
+    "type": "histogram"
+  }
+]

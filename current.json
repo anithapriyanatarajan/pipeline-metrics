@@ -1,0 +1,1446 @@
+[
+  {
+    "component": "controller",
+    "help": "Heap size target percentage configured by the user, otherwise 100.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_config_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "A summary of the wall-time pause (stop-the-world) duration in garbage collection cycles.",
+    "labels": [
+      "quantile"
+    ],
+    "name": "go_gc_duration_seconds",
+    "type": "summary"
+  },
+  {
+    "component": "controller",
+    "help": "Heap size target percentage configured by the user, otherwise 100. This value is set by the GOGC environment variable, and the runtime/debug.SetGCPercent function. Sourced from /gc/gogc:percent.",
+    "labels": [],
+    "name": "go_gc_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Go runtime memory limit configured by the user, otherwise math.MaxInt64. This value is set by the GOMEMLIMIT environment variable, and the runtime/debug.SetMemoryLimit function. Sourced from /gc/gomemlimit:bytes.",
+    "labels": [],
+    "name": "go_gc_gomemlimit_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Count of live goroutines.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_goroutine_count",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of goroutines that currently exist.",
+    "labels": [],
+    "name": "go_goroutines",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Information about the Go environment.",
+    "labels": [
+      "version"
+    ],
+    "name": "go_info",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Memory allocated to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_version",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_allocated_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Count of allocations to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_allocations_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Heap size target for the end of the GC cycle.",
+    "labels": [
+      "otel_scope_version",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_gc_goal_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Memory used by the Go runtime.",
+    "labels": [
+      "otel_scope_name",
+      "go_memory_type",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_used_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes allocated in heap and currently in use. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of bytes allocated in heap until now, even if released already. Equals to /gc/heap/allocs:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes used by the profiling bucket hash table. Equals to /memory/classes/profiling/buckets:bytes.",
+    "labels": [],
+    "name": "go_memstats_buck_hash_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of heap objects frees. Equals to /gc/heap/frees:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_frees_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes used for garbage collection system metadata. Equals to /memory/classes/metadata/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_gc_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes allocated and currently in use, same as go_memstats_alloc_bytes. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes waiting to be used. Equals to /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_idle_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes that are in use. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes",
+    "labels": [],
+    "name": "go_memstats_heap_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of currently allocated objects. Equals to /gc/heap/objects:objects.",
+    "labels": [],
+    "name": "go_memstats_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes released to OS. Equals to /memory/classes/heap/released:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_released_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes obtained from system. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes + /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of seconds since 1970 of last garbage collection.",
+    "labels": [],
+    "name": "go_memstats_last_gc_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of heap objects allocated, both live and gc-ed. Semantically a counter version for go_memstats_heap_objects gauge. Equals to /gc/heap/allocs:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_mallocs_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes in use by mcache structures. Equals to /memory/classes/metadata/mcache/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes used for mcache structures obtained from system. Equals to /memory/classes/metadata/mcache/inuse:bytes + /memory/classes/metadata/mcache/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes in use by mspan structures. Equals to /memory/classes/metadata/mspan/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes used for mspan structures obtained from system. Equals to /memory/classes/metadata/mspan/inuse:bytes + /memory/classes/metadata/mspan/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of heap bytes when next garbage collection will take place. Equals to /gc/heap/goal:bytes.",
+    "labels": [],
+    "name": "go_memstats_next_gc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes used for other system allocations. Equals to /memory/classes/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_other_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes obtained from system for stack allocator in non-CGO environments. Equals to /memory/classes/heap/stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes obtained from system for stack allocator. Equals to /memory/classes/heap/stacks:bytes + /memory/classes/os-stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes obtained from system. Equals to /memory/classes/total:byte.",
+    "labels": [],
+    "name": "go_memstats_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The number of OS threads that can execute user-level Go code simultaneously.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_processor_limit",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The current runtime.GOMAXPROCS setting, or the number of operating system threads that can execute user-level Go code simultaneously. Sourced from /sched/gomaxprocs:threads.",
+    "labels": [],
+    "name": "go_sched_gomaxprocs_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of OS threads created.",
+    "labels": [],
+    "name": "go_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Duration of HTTP client requests.",
+    "labels": [],
+    "name": "http_client_request_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Count of response codes partitioned by method and host",
+    "labels": [
+      "server_address",
+      "otel_scope_version",
+      "http_response_status_code",
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "http_request_method"
+    ],
+    "name": "kn_k8s_client_http_response_status_code_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of items added to the queue",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "name",
+      "otel_scope_version"
+    ],
+    "name": "kn_workqueue_adds_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of current items in the queue",
+    "labels": [
+      "otel_scope_version",
+      "name",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "kn_workqueue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "",
+    "labels": [],
+    "name": "kn_workqueue_process_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "How long an item stays in workqueue",
+    "labels": [],
+    "name": "kn_workqueue_queue_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Number of items re-added to the queue",
+    "labels": [
+      "otel_scope_name",
+      "name",
+      "otel_scope_version",
+      "otel_scope_schema_url"
+    ],
+    "name": "kn_workqueue_retries_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "",
+    "labels": [
+      "otel_scope_version",
+      "name",
+      "otel_scope_schema_url",
+      "otel_scope_name"
+    ],
+    "name": "kn_workqueue_unfinished_work_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total user and system CPU time spent in seconds.",
+    "labels": [],
+    "name": "process_cpu_seconds_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Maximum number of open file descriptors.",
+    "labels": [],
+    "name": "process_max_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes received by the process over the network.",
+    "labels": [],
+    "name": "process_network_receive_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of bytes sent by the process over the network.",
+    "labels": [],
+    "name": "process_network_transmit_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of open file descriptors.",
+    "labels": [],
+    "name": "process_open_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Resident memory size in bytes.",
+    "labels": [],
+    "name": "process_resident_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Start time of the process since unix epoch in seconds.",
+    "labels": [],
+    "name": "process_start_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Virtual memory size in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Maximum amount of virtual memory available in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_max_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Current number of scrapes being served.",
+    "labels": [],
+    "name": "promhttp_metric_handler_requests_in_flight",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Total number of scrapes by HTTP status code.",
+    "labels": [
+      "code"
+    ],
+    "name": "promhttp_metric_handler_requests_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Target metadata",
+    "labels": [
+      "telemetry_sdk_version",
+      "service_version",
+      "k8s_pod_name",
+      "telemetry_sdk_name",
+      "k8s_namespace_name",
+      "telemetry_sdk_language",
+      "service_name"
+    ],
+    "name": "target_info",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "The pipelinerun execution time in seconds",
+    "labels": [],
+    "name": "tekton_pipelines_controller_pipelinerun_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "The pipelinerun's taskrun execution time in seconds",
+    "labels": [],
+    "name": "tekton_pipelines_controller_pipelinerun_taskrun_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns",
+    "labels": [
+      "otel_scope_schema_url",
+      "reason",
+      "status",
+      "otel_scope_name",
+      "otel_scope_version",
+      "namespace",
+      "pipeline"
+    ],
+    "name": "tekton_pipelines_controller_pipelinerun_total",
+    "type": "counter"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns executing currently that are waiting on resolution requests for their pipeline references.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "tekton_pipelines_controller_running_pipelineruns_waiting_on_pipeline_resolution",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of pipelineruns executing currently that are waiting on resolution requests for the task references of their taskrun children.",
+    "labels": [
+      "otel_scope_version",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "tekton_pipelines_controller_running_pipelineruns_waiting_on_task_resolution",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently",
+    "labels": [
+      "otel_scope_version",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "tekton_pipelines_controller_running_taskruns",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns executing currently, but whose underlying Pods or Containers are suspended by k8s because of defined ResourceQuotas.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_version",
+      "otel_scope_schema_url"
+    ],
+    "name": "tekton_pipelines_controller_running_taskruns_throttled_by_quota",
+    "type": "gauge"
+  },
+  {
+    "component": "controller",
+    "help": "scheduling latency for the taskrun pods",
+    "labels": [],
+    "name": "tekton_pipelines_controller_taskrun_pod_latency_milliseconds",
+    "type": "histogram"
+  },
+  {
+    "component": "controller",
+    "help": "Number of taskruns",
+    "labels": [
+      "status",
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "tekton_pipelines_controller_taskrun_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Heap size target percentage configured by the user, otherwise 100.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_config_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "A summary of the wall-time pause (stop-the-world) duration in garbage collection cycles.",
+    "labels": [
+      "quantile"
+    ],
+    "name": "go_gc_duration_seconds",
+    "type": "summary"
+  },
+  {
+    "component": "events",
+    "help": "Heap size target percentage configured by the user, otherwise 100. This value is set by the GOGC environment variable, and the runtime/debug.SetGCPercent function. Sourced from /gc/gogc:percent.",
+    "labels": [],
+    "name": "go_gc_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Go runtime memory limit configured by the user, otherwise math.MaxInt64. This value is set by the GOMEMLIMIT environment variable, and the runtime/debug.SetMemoryLimit function. Sourced from /gc/gomemlimit:bytes.",
+    "labels": [],
+    "name": "go_gc_gomemlimit_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Count of live goroutines.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_goroutine_count",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of goroutines that currently exist.",
+    "labels": [],
+    "name": "go_goroutines",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Information about the Go environment.",
+    "labels": [
+      "version"
+    ],
+    "name": "go_info",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Memory allocated to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_version",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_allocated_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Count of allocations to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_allocations_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Heap size target for the end of the GC cycle.",
+    "labels": [
+      "otel_scope_version",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_gc_goal_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Memory used by the Go runtime.",
+    "labels": [
+      "otel_scope_name",
+      "go_memory_type",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_used_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes allocated in heap and currently in use. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Total number of bytes allocated in heap until now, even if released already. Equals to /gc/heap/allocs:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes used by the profiling bucket hash table. Equals to /memory/classes/profiling/buckets:bytes.",
+    "labels": [],
+    "name": "go_memstats_buck_hash_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Total number of heap objects frees. Equals to /gc/heap/frees:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_frees_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes used for garbage collection system metadata. Equals to /memory/classes/metadata/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_gc_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes allocated and currently in use, same as go_memstats_alloc_bytes. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes waiting to be used. Equals to /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_idle_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes that are in use. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes",
+    "labels": [],
+    "name": "go_memstats_heap_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of currently allocated objects. Equals to /gc/heap/objects:objects.",
+    "labels": [],
+    "name": "go_memstats_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes released to OS. Equals to /memory/classes/heap/released:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_released_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes obtained from system. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes + /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of seconds since 1970 of last garbage collection.",
+    "labels": [],
+    "name": "go_memstats_last_gc_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Total number of heap objects allocated, both live and gc-ed. Semantically a counter version for go_memstats_heap_objects gauge. Equals to /gc/heap/allocs:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_mallocs_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes in use by mcache structures. Equals to /memory/classes/metadata/mcache/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes used for mcache structures obtained from system. Equals to /memory/classes/metadata/mcache/inuse:bytes + /memory/classes/metadata/mcache/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes in use by mspan structures. Equals to /memory/classes/metadata/mspan/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes used for mspan structures obtained from system. Equals to /memory/classes/metadata/mspan/inuse:bytes + /memory/classes/metadata/mspan/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of heap bytes when next garbage collection will take place. Equals to /gc/heap/goal:bytes.",
+    "labels": [],
+    "name": "go_memstats_next_gc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes used for other system allocations. Equals to /memory/classes/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_other_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes obtained from system for stack allocator in non-CGO environments. Equals to /memory/classes/heap/stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes obtained from system for stack allocator. Equals to /memory/classes/heap/stacks:bytes + /memory/classes/os-stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes obtained from system. Equals to /memory/classes/total:byte.",
+    "labels": [],
+    "name": "go_memstats_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The number of OS threads that can execute user-level Go code simultaneously.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_processor_limit",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "The current runtime.GOMAXPROCS setting, or the number of operating system threads that can execute user-level Go code simultaneously. Sourced from /sched/gomaxprocs:threads.",
+    "labels": [],
+    "name": "go_sched_gomaxprocs_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of OS threads created.",
+    "labels": [],
+    "name": "go_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Duration of HTTP client requests.",
+    "labels": [],
+    "name": "http_client_request_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "events",
+    "help": "Count of response codes partitioned by method and host",
+    "labels": [
+      "server_address",
+      "otel_scope_version",
+      "http_response_status_code",
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "http_request_method"
+    ],
+    "name": "kn_k8s_client_http_response_status_code_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "",
+    "labels": [
+      "otel_scope_version",
+      "name",
+      "otel_scope_schema_url",
+      "otel_scope_name"
+    ],
+    "name": "kn_workqueue_unfinished_work_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Total user and system CPU time spent in seconds.",
+    "labels": [],
+    "name": "process_cpu_seconds_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Maximum number of open file descriptors.",
+    "labels": [],
+    "name": "process_max_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes received by the process over the network.",
+    "labels": [],
+    "name": "process_network_receive_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Number of bytes sent by the process over the network.",
+    "labels": [],
+    "name": "process_network_transmit_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Number of open file descriptors.",
+    "labels": [],
+    "name": "process_open_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Resident memory size in bytes.",
+    "labels": [],
+    "name": "process_resident_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Start time of the process since unix epoch in seconds.",
+    "labels": [],
+    "name": "process_start_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Virtual memory size in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Maximum amount of virtual memory available in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_max_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Current number of scrapes being served.",
+    "labels": [],
+    "name": "promhttp_metric_handler_requests_in_flight",
+    "type": "gauge"
+  },
+  {
+    "component": "events",
+    "help": "Total number of scrapes by HTTP status code.",
+    "labels": [
+      "code"
+    ],
+    "name": "promhttp_metric_handler_requests_total",
+    "type": "counter"
+  },
+  {
+    "component": "events",
+    "help": "Target metadata",
+    "labels": [
+      "telemetry_sdk_version",
+      "service_version",
+      "k8s_pod_name",
+      "telemetry_sdk_name",
+      "k8s_namespace_name",
+      "telemetry_sdk_language",
+      "service_name"
+    ],
+    "name": "target_info",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Heap size target percentage configured by the user, otherwise 100.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_config_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "A summary of the wall-time pause (stop-the-world) duration in garbage collection cycles.",
+    "labels": [
+      "quantile"
+    ],
+    "name": "go_gc_duration_seconds",
+    "type": "summary"
+  },
+  {
+    "component": "webhook",
+    "help": "Heap size target percentage configured by the user, otherwise 100. This value is set by the GOGC environment variable, and the runtime/debug.SetGCPercent function. Sourced from /gc/gogc:percent.",
+    "labels": [],
+    "name": "go_gc_gogc_percent",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Go runtime memory limit configured by the user, otherwise math.MaxInt64. This value is set by the GOMEMLIMIT environment variable, and the runtime/debug.SetMemoryLimit function. Sourced from /gc/gomemlimit:bytes.",
+    "labels": [],
+    "name": "go_gc_gomemlimit_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Count of live goroutines.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_goroutine_count",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of goroutines that currently exist.",
+    "labels": [],
+    "name": "go_goroutines",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Information about the Go environment.",
+    "labels": [
+      "version"
+    ],
+    "name": "go_info",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Memory allocated to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_version",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_allocated_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Count of allocations to the heap by the application.",
+    "labels": [
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_allocations_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Heap size target for the end of the GC cycle.",
+    "labels": [
+      "otel_scope_version",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "go_memory_gc_goal_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Memory used by the Go runtime.",
+    "labels": [
+      "otel_scope_name",
+      "go_memory_type",
+      "otel_scope_schema_url",
+      "otel_scope_version"
+    ],
+    "name": "go_memory_used_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes allocated in heap and currently in use. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of bytes allocated in heap until now, even if released already. Equals to /gc/heap/allocs:bytes.",
+    "labels": [],
+    "name": "go_memstats_alloc_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes used by the profiling bucket hash table. Equals to /memory/classes/profiling/buckets:bytes.",
+    "labels": [],
+    "name": "go_memstats_buck_hash_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of heap objects frees. Equals to /gc/heap/frees:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_frees_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes used for garbage collection system metadata. Equals to /memory/classes/metadata/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_gc_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes allocated and currently in use, same as go_memstats_alloc_bytes. Equals to /memory/classes/heap/objects:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_alloc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes waiting to be used. Equals to /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_idle_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes that are in use. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes",
+    "labels": [],
+    "name": "go_memstats_heap_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of currently allocated objects. Equals to /gc/heap/objects:objects.",
+    "labels": [],
+    "name": "go_memstats_heap_objects",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes released to OS. Equals to /memory/classes/heap/released:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_released_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes obtained from system. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes + /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_heap_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of seconds since 1970 of last garbage collection.",
+    "labels": [],
+    "name": "go_memstats_last_gc_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of heap objects allocated, both live and gc-ed. Semantically a counter version for go_memstats_heap_objects gauge. Equals to /gc/heap/allocs:objects + /gc/heap/tiny/allocs:objects.",
+    "labels": [],
+    "name": "go_memstats_mallocs_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes in use by mcache structures. Equals to /memory/classes/metadata/mcache/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes used for mcache structures obtained from system. Equals to /memory/classes/metadata/mcache/inuse:bytes + /memory/classes/metadata/mcache/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mcache_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes in use by mspan structures. Equals to /memory/classes/metadata/mspan/inuse:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes used for mspan structures obtained from system. Equals to /memory/classes/metadata/mspan/inuse:bytes + /memory/classes/metadata/mspan/free:bytes.",
+    "labels": [],
+    "name": "go_memstats_mspan_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of heap bytes when next garbage collection will take place. Equals to /gc/heap/goal:bytes.",
+    "labels": [],
+    "name": "go_memstats_next_gc_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes used for other system allocations. Equals to /memory/classes/other:bytes.",
+    "labels": [],
+    "name": "go_memstats_other_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes obtained from system for stack allocator in non-CGO environments. Equals to /memory/classes/heap/stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_inuse_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes obtained from system for stack allocator. Equals to /memory/classes/heap/stacks:bytes + /memory/classes/os-stacks:bytes.",
+    "labels": [],
+    "name": "go_memstats_stack_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes obtained from system. Equals to /memory/classes/total:byte.",
+    "labels": [],
+    "name": "go_memstats_sys_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The number of OS threads that can execute user-level Go code simultaneously.",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "otel_scope_version"
+    ],
+    "name": "go_processor_limit",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "The current runtime.GOMAXPROCS setting, or the number of operating system threads that can execute user-level Go code simultaneously. Sourced from /sched/gomaxprocs:threads.",
+    "labels": [],
+    "name": "go_sched_gomaxprocs_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of OS threads created.",
+    "labels": [],
+    "name": "go_threads",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Duration of HTTP client requests.",
+    "labels": [],
+    "name": "http_client_request_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Size of HTTP server request bodies.",
+    "labels": [],
+    "name": "http_server_request_body_size_bytes",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Duration of HTTP server requests.",
+    "labels": [],
+    "name": "http_server_request_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Size of HTTP server response bodies.",
+    "labels": [],
+    "name": "http_server_response_body_size_bytes",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Count of response codes partitioned by method and host",
+    "labels": [
+      "server_address",
+      "otel_scope_version",
+      "http_response_status_code",
+      "otel_scope_name",
+      "otel_scope_schema_url",
+      "http_request_method"
+    ],
+    "name": "kn_k8s_client_http_response_status_code_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "The duration of task execution.",
+    "labels": [],
+    "name": "kn_webhook_handler_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of items added to the queue",
+    "labels": [
+      "otel_scope_schema_url",
+      "otel_scope_name",
+      "name",
+      "otel_scope_version"
+    ],
+    "name": "kn_workqueue_adds_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of current items in the queue",
+    "labels": [
+      "otel_scope_version",
+      "name",
+      "otel_scope_name",
+      "otel_scope_schema_url"
+    ],
+    "name": "kn_workqueue_depth",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "",
+    "labels": [],
+    "name": "kn_workqueue_process_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "How long an item stays in workqueue",
+    "labels": [],
+    "name": "kn_workqueue_queue_duration_seconds",
+    "type": "histogram"
+  },
+  {
+    "component": "webhook",
+    "help": "",
+    "labels": [
+      "otel_scope_version",
+      "name",
+      "otel_scope_schema_url",
+      "otel_scope_name"
+    ],
+    "name": "kn_workqueue_unfinished_work_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total user and system CPU time spent in seconds.",
+    "labels": [],
+    "name": "process_cpu_seconds_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Maximum number of open file descriptors.",
+    "labels": [],
+    "name": "process_max_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes received by the process over the network.",
+    "labels": [],
+    "name": "process_network_receive_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of bytes sent by the process over the network.",
+    "labels": [],
+    "name": "process_network_transmit_bytes_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Number of open file descriptors.",
+    "labels": [],
+    "name": "process_open_fds",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Resident memory size in bytes.",
+    "labels": [],
+    "name": "process_resident_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Start time of the process since unix epoch in seconds.",
+    "labels": [],
+    "name": "process_start_time_seconds",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Virtual memory size in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Maximum amount of virtual memory available in bytes.",
+    "labels": [],
+    "name": "process_virtual_memory_max_bytes",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Current number of scrapes being served.",
+    "labels": [],
+    "name": "promhttp_metric_handler_requests_in_flight",
+    "type": "gauge"
+  },
+  {
+    "component": "webhook",
+    "help": "Total number of scrapes by HTTP status code.",
+    "labels": [
+      "code"
+    ],
+    "name": "promhttp_metric_handler_requests_total",
+    "type": "counter"
+  },
+  {
+    "component": "webhook",
+    "help": "Target metadata",
+    "labels": [
+      "telemetry_sdk_version",
+      "service_version",
+      "k8s_pod_name",
+      "telemetry_sdk_name",
+      "k8s_namespace_name",
+      "telemetry_sdk_language",
+      "service_name"
+    ],
+    "name": "target_info",
+    "type": "gauge"
+  }
+]
